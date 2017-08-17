@@ -12,7 +12,7 @@ using System.Windows.Forms;
 */
 namespace COMP123_S2017_FinalExam_300922629
 {
-    class ScoreBoard 
+    class ScoreBoard : PickHighestCardForm
     {
         //PRIVATE INSTANCE VARIABLES
         private TextBox _finalScoreTextBox;
@@ -90,9 +90,9 @@ namespace COMP123_S2017_FinalExam_300922629
         //METHODS
         public ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
         {
-            this._scoreTextBox = scoreTextBox;
-            this._timeTextBox = timeTextBox;
-            this._finalScoreTextBox = finalScoreTextBox;
+            scoreTextBox = TimeTextBox;
+            timeTextBox = TimeTextBox;
+            finalScoreTextBox = FinalScoreTextBox;
         }
         public void UpdateTime()
         {

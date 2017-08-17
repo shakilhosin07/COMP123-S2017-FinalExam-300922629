@@ -14,8 +14,8 @@ using System.Windows.Forms;
  * Name: Shakil Hosin
  * Date: August 17th, 2017
  * StudentID: 300922629
- * Description:
- * Version: 0.1 
+ * Description: This is the PickHighestCard Form
+ * Version: 0.2 Reset the Score and time
  */
 
 namespace COMP123_S2017_FinalExam_300922629
@@ -29,6 +29,7 @@ namespace COMP123_S2017_FinalExam_300922629
         Deck _deck;
         Hand _hand;
         int _maximumPoints;
+        
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -112,6 +113,11 @@ namespace COMP123_S2017_FinalExam_300922629
             }
         }
 
+        public ScoreBoard scoreboard
+        {
+
+        }
+           
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public PickHighestCardForm()
         {
@@ -198,7 +204,11 @@ namespace COMP123_S2017_FinalExam_300922629
             DealButton.Enabled = true;
             this._enableDealtCards();
             this._hideFinalScore();
+            //Resetting the score and the timer
+            scoreboard.Score = 0;
+            scoreboard.Time = 30;
             UserMessageTextBox.Text = "Click the Deal Button!";
+
         }
 
         /// <summary>
