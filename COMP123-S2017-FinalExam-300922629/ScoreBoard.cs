@@ -8,11 +8,11 @@ using System.Windows.Forms;
 * Name: Shakil Hosin
 * Date: August 17th, 2017
 * Description: This is the ScoreBoard Class
-* Version: 0.1 - Added the OverWrite method
+* Version: 0.4 - Created the methods 
 */
 namespace COMP123_S2017_FinalExam_300922629
 {
-    class ScoreBoard : PickHighestCardForm
+    class ScoreBoard 
     {
         //PRIVATE INSTANCE VARIABLES
         private TextBox _finalScoreTextBox;
@@ -43,6 +43,9 @@ namespace COMP123_S2017_FinalExam_300922629
             set
             {
                 this._score = value;
+                this._score = Convert.ToInt32(ScoreTextBox.Text);
+                this._score = Convert.ToInt32(FinalScoreTextBox.Text);
+
             }
         }
         public TextBox ScoreTextBox
@@ -65,6 +68,7 @@ namespace COMP123_S2017_FinalExam_300922629
             set
             {
                 this._time = value;
+                this._time = Convert.ToInt32(TimeTextBox.Text);
             }
             
         }
@@ -77,8 +81,28 @@ namespace COMP123_S2017_FinalExam_300922629
             set
             {
                 this._timeTextBox = value;
+               
             }
         }
         //CONSTRUCTORS
+
+
+        //METHODS
+        public ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
+        {
+            this._scoreTextBox = scoreTextBox;
+            this._timeTextBox = timeTextBox;
+            this._finalScoreTextBox = finalScoreTextBox;
+        }
+        public void UpdateTime()
+        {
+            int time = Convert.ToInt32(TimeTextBox.Text);
+            do
+            {
+                time--;
+                time = Time;
+                TimeTextBox.Text = Convert.ToString(this.Time);
+            } while (time != 0);
+        }
     }
 }
