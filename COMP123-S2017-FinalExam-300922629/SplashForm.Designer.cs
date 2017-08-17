@@ -28,7 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.SplashTimer = new System.Windows.Forms.Timer(this.components);
+            this.WelcomeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // SplashTimer
+            // 
+            this.SplashTimer.Enabled = true;
+            this.SplashTimer.Interval = 3000;
+            this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
+            // 
+            // WelcomeLabel
+            // 
+            this.WelcomeLabel.AutoSize = true;
+            this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.WelcomeLabel.Location = new System.Drawing.Point(129, 54);
+            this.WelcomeLabel.Name = "WelcomeLabel";
+            this.WelcomeLabel.Size = new System.Drawing.Size(412, 155);
+            this.WelcomeLabel.TabIndex = 0;
+            this.WelcomeLabel.Text = "Welcome To The Highest Card\r\n                     Game!\r\n\r\n300922629\r\nShakil Hosi" +
+    "n\r\n";
             // 
             // SplashForm
             // 
@@ -37,6 +58,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(600, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.WelcomeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -44,9 +66,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer SplashTimer;
+        private System.Windows.Forms.Label WelcomeLabel;
     }
 }

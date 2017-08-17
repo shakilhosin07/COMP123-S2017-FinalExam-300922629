@@ -19,11 +19,14 @@ namespace COMP123_S2017_FinalExam_300922629
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static PickHighestCardForm highestcardform;
         [STAThread]
         public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            highestcardform = new PickHighestCardForm();
+            Application.Run(new SplashForm());
             Application.Run(new PickHighestCardForm());
         }
     }
