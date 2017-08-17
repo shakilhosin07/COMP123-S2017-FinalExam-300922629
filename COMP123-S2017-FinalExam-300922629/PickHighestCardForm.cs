@@ -29,7 +29,7 @@ namespace COMP123_S2017_FinalExam_300922629
         Deck _deck;
         Hand _hand;
         int _maximumPoints;
-        
+        TextBox _scoreboard;
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -112,10 +112,14 @@ namespace COMP123_S2017_FinalExam_300922629
                 this._maximumPoints = value;
             }
         }
+        //Not sure how to get accessibility to the class "ScoreBoard"
 
-        public ScoreBoard scoreboard
+        public TextBox Scoreboard
         {
-
+           get
+            {
+                return;
+            }
         }
            
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -204,9 +208,8 @@ namespace COMP123_S2017_FinalExam_300922629
             DealButton.Enabled = true;
             this._enableDealtCards();
             this._hideFinalScore();
-            //Resetting the score and the timer
-            scoreboard.Score = 0;
-            scoreboard.Time = 30;
+            ScoreBoard.Score = 0;
+            ScoreBoard.Time = 30;
             UserMessageTextBox.Text = "Click the Deal Button!";
 
         }
@@ -406,6 +409,13 @@ namespace COMP123_S2017_FinalExam_300922629
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void UserMessageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ScoreTextBox.Text = "";
+            TimeTextBox.Text = "";
+            FinalScoreTextBox.Text = "";
         }
     }
 }
