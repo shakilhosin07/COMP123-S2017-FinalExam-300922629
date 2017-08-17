@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 27, 2017
- * Description: This is the Hand class
- * It inherits from the CardList Abstract class
- * Version: 0.1 - Created the Hand class
+ * Name: Shakil Hosin
+ * Date: August 17th, 2017
+ * Description: This is the Card Class
+ * Version: 0.1 - Added the OverWrite method
  */
 
 namespace COMP123_S2017_FinalExam_300922629

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
- * Description: This is the Deck class
- * It inherits from the CardList Abstract class
- * Version: 0.7 - Added the Deal5 method
+ * Name: Shakil Hosin
+ * Date: August 17th, 2017
+ * Description: This is the Card Class
+ * Version: 0.1 - Added the OverWrite method
  */
 
 namespace COMP123_S2017_FinalExam_300922629

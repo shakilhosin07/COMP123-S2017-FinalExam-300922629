@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
+ * Name: Shakil Hosin
+ * Date: August 17th, 2017
+ * StudentID: 300922629
  * Description:
- * Version:
+ * Version: 0.1 
  */
 
 namespace COMP123_S2017_FinalExam_300922629
